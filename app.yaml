@@ -1,0 +1,6 @@
+runtime: python31
+
+entrypoint: gunicorn -b :$PORT djangoProject:wsgi
+
+env_variables:
+  VARIABLE_NAME: "variable_value"
