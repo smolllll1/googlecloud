@@ -1,0 +1,29 @@
+<section id="services">
+      <div class="container text-center">
+        <header class="mb-5">
+          <h2 class="handwriting-text">We provide the following</h2>
+          <h5 class="text-uppercase text-gray-500 fw-normal">Our Specialities</h5>
+        </header>
+        <div class="row gy-4">
+          <!-- item-->
+            {% for serve in servis %}
+                <div class="hover-icon-primary col-md-4">
+                    <div class="icon mb-4 mx-auto">
+                        {% if serve.position == 'M' %}
+                            <i class="fas fa-heart"></i>
+                        {% endif %}
+                        {% if serve.position == 'E' %}
+                            <i class="fas fa-user-tie"></i>
+                        {% endif %}
+                        {% if serve.position == 'F' %}
+                            <i class="fas fa-hamburger"></i>
+                        {% endif %}
+                    </div>
+                    <h5 class="text-uppercase">{{ serve.title }}</h5>
+                    <p class="mb-0 text-muted">{{ serve.body}}</p>
+                  </div>
+            {% endfor %}
+
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,15 @@
+<section class="bg-light" id="about">
+    <div class="container text-center">
+        <header class="mb-5">
+            <h2 class="handwriting-text">About Restaurant</h2>
+        </header>
+        {% for item in ubout %}
+            <div class="row">
+            <h5 class="text-uppercase text-gray-500 fw-normal">{{ item.title }}</h5>
+            <div class="col-lg-10 mx-auto">
+                <p class="lead text-muted mb-0">{{ item.body }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div><img class="position-absolute top-100 start-100 translate-middle d-none d-lg-block" src="static/img/dish-d.png" alt="..." width="300">
+</section>
