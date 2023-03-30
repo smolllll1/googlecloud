@@ -30,7 +30,7 @@ class Dish(models.Model):
 	price = models.DecimalField(max_digits=8, decimal_places=2)
 	discount = models.DecimalField(max_digits=8, decimal_places=0)
 	ingradients = models.CharField(max_length=100)
-	photo = models.ImageField(upload_to='dishes')
+	photo = models.ImageField(upload_to='/dishes/')
 
 	def __str__(self):
 		return f'{self.title}'
